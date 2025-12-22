@@ -1,0 +1,63 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Advanced Authentication System with Node.js and Express",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all",
+    "test": "jest --coverage",
+    "lint": "eslint . --ext .js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "jwt",
+    "authentication",
+    "oauth2",
+    "passport",
+    "sequelize",
+    "mysql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-redis": "^7.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.6.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.0",
+    "helmet": "^6.0.1",
+    "hpp": "^0.2.3",
+    "ioredis": "^5.2.5",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.9.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "rate-limiter-flexible": "^2.4.1",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.5.2",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+exports.enviarContato = (req, res) => {
+  const { nome, email, mensagem } = req.body;
+
+  if (!nome || !email || !mensagem) {
+    return res.status(400).json({ error: 'Dados incompletos' });
+  }
+
+  console.log('Contato recebido:', { nome, email, mensagem });
+
+  res.status(200).json({ message: 'Mensagem recebida com sucesso' });
+};

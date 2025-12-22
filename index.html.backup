@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Lucas</span></h1>
+                <h2>Full Stack Developer</h2>
+                <p>I create beautiful and functional websites</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>I'm a passionate web developer</h3>
+                    <p>I have a strong foundation in web development and a passion for creating beautiful, responsive websites. With expertise in HTML, CSS, and JavaScript, I bring ideas to life through clean and efficient code.</p>
+                    <div class="skills">
+                        <h4>My Skills</h4>
+                        <div class="skill-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                            <span>Full Stack</span>
+                            <span>Frontend</span>
+                            <span>Backend</span>
+                            <span>Responsive Design</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>React.js, Vue.js, Angular</li>
+                        <li>Responsive Web Design</li>
+                        <li>UI/UX Principles</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Node.js, Express</li>
+                        <li>Python, Django, Flask</li>
+                        <li>RESTful APIs</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & DevOps</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>MongoDB, MySQL, PostgreSQL</li>
+                        <li>Docker, Kubernetes</li>
+                        <li>AWS, Google Cloud</li>
+                        <li>CI/CD Pipelines</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Others</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Git, GitHub, GitLab</li>
+                        <li>VS Code, WebStorm</li>
+                        <li>Agile/Scrum</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://img.icons8.com/color/480/snake.png" alt="Snake Game" style="width: 100%; height: auto; background: #000; padding: 20px; box-sizing: border-box;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Snake vs Cats</h3>
+                        <p>Classic Snake game with a twist - avoid the cats! Built with HTML5 Canvas and JavaScript.</p>
+                        <div class="project-links">
+                            <a href="projects/snake-game/index.html" class="btn">Play Game</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="auth-project">
+                    <div class="project-image">
+                        <div style="width: 100%; height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid #333; position: relative; overflow: hidden;">
+                            <div id="auth-demo" style="display: none; width: 100%; height: 100%; padding: 20px; color: white; text-align: left; overflow-y: auto;">
+                                <h4 style="color: #4CAF50; margin-top: 0;">Login Demo</h4>
+                                <div style="margin-bottom: 10px;">
+                                    <input type="text" id="demo-email" placeholder="Email" style="width: 100%; padding: 8px; margin: 5px 0; background: #252538; border: 1px solid #333; color: white; border-radius: 4px;">
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <input type="password" id="demo-password" placeholder="Password" style="width: 100%; padding: 8px; margin: 5px 0; background: #252538; border: 1px solid #333; color: white; border-radius: 4px;">
+                                </div>
+                                <button id="demo-login" style="background: #4CAF50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; width: 100%;">Login</button>
+                                <p id="demo-message" style="font-size: 12px; margin: 10px 0 0; min-height: 20px; color: #ff6b6b;"></p>
+                            </div>
+                            <div id="auth-placeholder" style="text-align: center; padding: 20px; transition: all 0.3s ease;">
+                                <div style="font-size: 48px;">🔐</div>
+                                <h3 style="color: #fff; margin: 10px 0;">User Auth System</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>User Authentication System</h3>
+                        <p>Secure user authentication system with JWT, protected routes, and user profiles. Built with Node.js, Express, MongoDB, and React.</p>
+                        <div class="project-features" style="margin: 10px 0; font-size: 0.9em; color: #aaa;">
+                            <div>✅ User Registration</div>
+                            <div>✅ Secure Login/Logout</div>
+                            <div>✅ JWT Authentication</div>
+                            <div>✅ Protected Routes</div>
+                            <div>✅ User Profiles</div>
+                        </div>
+                        <div class="project-links">
+                            <button id="viewDemoBtn" class="btn" style="background: #4CAF50;">View Demo</button>
+                            <a href="#" id="viewCodeBtn" class="btn btn-outline" style="border-color: #4CAF50; color: #4CAF50;">Source Code</a>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const viewDemoBtn = document.getElementById('viewDemoBtn');
+                            const viewCodeBtn = document.getElementById('viewCodeBtn');
+                            const authDemo = document.getElementById('auth-demo');
+                            const authPlaceholder = document.getElementById('auth-placeholder');
+                            const demoLoginBtn = document.getElementById('demo-login');
+                            const demoMessage = document.getElementById('demo-message');
+                            
+                            // Toggle demo interface
+                            viewDemoBtn.addEventListener('click', function() {
+                                authDemo.style.display = authDemo.style.display === 'block' ? 'none' : 'block';
+                                authPlaceholder.style.display = authDemo.style.display === 'block' ? 'none' : 'block';
+                                
+                                // Update button text
+                                viewDemoBtn.textContent = authDemo.style.display === 'block' ? 'Hide Demo' : 'View Demo';
+                            });
+                            
+                            // Demo login functionality
+                            demoLoginBtn.addEventListener('click', function() {
+                                const email = document.getElementById('demo-email').value;
+                                const password = document.getElementById('demo-password').value;
+                                
+                                // Simple validation
+                                if (!email || !password) {
+                                    demoMessage.textContent = 'Please enter both email and password';
+                                    return;
+                                }
+                                
+                                // Simulate API call
+                                demoMessage.textContent = 'Logging in...';
+                                demoMessage.style.color = '#4CAF50';
+                                
+                                // Simulate API delay
+                                setTimeout(() => {
+                                    if (email.includes('@') && password.length >= 6) {
+                                        demoMessage.textContent = 'Login successful! Welcome back!';
+                                        demoMessage.style.color = '#4CAF50';
+                                    } else {
+                                        demoMessage.textContent = 'Invalid email or password. Try: demo@example.com / demo123';
+                                        demoMessage.style.color = '#ff6b6b';
+                                    }
+                                }, 1000);
+                            });
+                            
+                            // Source code button
+                            viewCodeBtn.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                alert('Source code will be available soon!');
+                                // You can update this to link to your GitHub repository later
+                                // window.open('https://github.com/yourusername/auth-system', '_blank');
+                            });
+                            
+                            // Allow pressing Enter to login
+                            document.getElementById('demo-password').addEventListener('keyup', function(e) {
+                                if (e.key === 'Enter') {
+                                    demoLoginBtn.click();
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; overflow: hidden;">
+                            <div style="text-align: center; padding: 20px; color: white;">
+                                <div style="font-size: 48px;">🎓</div>
+                                <h3 style="color: #fff; margin: 10px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">EduFlow</h3>
+                                <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Online Learning Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>EduFlow - Online Learning Platform</h3>
+                        <p>A modern SaaS platform for creating and selling online courses with integrated payment processing and student management.</p>
+                        <div class="project-features" style="margin: 10px 0; font-size: 0.9em; color: #aaa;">
+                            <div>🎯 Course Creation & Management</div>
+                            <div>💳 Subscription & One-time Payments</div>
+                            <div>📊 Student Progress Tracking</div>
+                            <div>🎥 Video Content Hosting</div>
+                            <div>📱 Mobile Responsive</div>
+                        </div>
+                        <div class="project-links">
+                            <button id="viewSaaSDemo" class="btn" style="background: #8a2be2;">View Demo</button>
+                            <a href="#" class="btn btn-outline" style="border-color: #8a2be2; color: #8a2be2;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- MovieDB API Project Card -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; overflow: hidden;">
+                            <div style="text-align: center; padding: 20px; color: white;">
+                                <div style="font-size: 48px;">🎬</div>
+                                <h3 style="color: #fff; margin: 10px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">MovieDB API</h3>
+                                <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Public Movie Database</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MovieDB API - Public Movie Database</h3>
+                        <p>A comprehensive RESTful API for accessing movie information, including details, ratings, cast, and more.</p>
+                        <div class="project-features" style="margin: 10px 0; font-size: 0.9em; color: #aaa;">
+                            <div>🎬 Access to thousands of movies and TV shows</div>
+                            <div>🔍 Search by title, genre, year, or actor</div>
+                            <div>📊 Get detailed information including cast and ratings</div>
+                            <div>📱 Easy-to-use RESTful endpoints</div>
+                            <div>📚 Comprehensive documentation</div>
+                        </div>
+                        <div class="project-links">
+                            <button id="api-demo-btn" class="btn" style="background: #ff6b6b;">View API Docs</button>
+                            <a href="#" id="api-code-btn" class="btn btn-outline" style="border-color: #ff6b6b; color: #ff6b6b;">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- API Documentation Modal -->
+                    <div id="api-docs-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; overflow-y: auto; padding: 20px; box-sizing: border-box;">
+                        <div style="max-width: 900px; background: #1a1a2e; margin: 40px auto; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 30px rgba(0,0,0,0.5); position: relative;">
+                            <button id="close-api-docs" style="position: absolute; top: 15px; right: 20px; background: #ff4d4d; border: none; color: white; width: 30px; height: 30px; border-radius: 50%; font-size: 18px; cursor: pointer; z-index: 1001; display: flex; align-items: center; justify-content: center;">×</button>
+                            <div style="padding: 30px;">
+                                <h2 style="color: #ff6b6b; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">MovieDB API Documentation</h2>
+                                
+                                <div style="margin: 20px 0;">
+                                    <h3>Base URL</h3>
+                                    <div style="background: #252538; padding: 15px; border-radius: 5px; font-family: monospace; margin: 10px 0;">
+                                        https://api.moviedb.example.com/api/v1
+                                    </div>
+                                    <p>All endpoints are prefixed with <code>/api/v1</code></p>
+                                </div>
+
+                                <!-- Authentication Section -->
+                                <div style="margin: 30px 0; padding: 20px; background: #252538; border-radius: 5px; border-left: 4px solid #ff6b6b;">
+                                    <h3 style="margin-top: 0; color: #ff6b6b;">🔒 Authentication</h3>
+                                    <p>All endpoints require authentication using JWT. Include the token in the <code>Authorization</code> header.</p>
+                                    <div style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                        <code>Authorization: Bearer &lt;your_jwt_token&gt;</code>
+                                    </div>
+                                    <p>Admin privileges are required for creating, updating, or deleting movies.</p>
+                                </div>
+                                
+                                <div style="margin: 30px 0; padding: 15px; background: rgba(255, 107, 107, 0.1); border-left: 4px solid #ff6b6b; border-radius: 4px;">
+                                    <h3 style="color: #ff6b6b; margin-top: 0;">🔐 Authentication</h3>
+                                    <p>All endpoints require authentication using JWT. Include the token in the Authorization header:</p>
+                                        {
+                                            "email": "user@example.com",
+                                            "password": "yourpassword"
+                                        }
+                                    </div>
+                                <!-- Image Uploads -->
+                                <div style="margin: 30px 0; padding: 20px; background: #252538; border-radius: 5px;
+                                    border-left: 4px solid #4CAF50;">
+                                    <h3 style="margin-top: 0; color: #4CAF50;">🖼️ Image Uploads</h3>
+                                    <p>Upload movie posters and backdrops using <code>multipart/form-data</code>.</p>
+                                    
+                                    <h4>Supported Formats</h4>
+                                    <ul style="margin: 10px 0 20px 20px;">
+                                        <li>JPEG (.jpg, .jpeg)</li>
+                                        <li>PNG (.png)</li>
+                                        <li>WebP (.webp)</li>
+                                    </ul>
+                                    
+                                    <h4>File Size Limit</h4>
+                                    <p>Maximum file size: <strong>5MB</strong> per image</p>
+                                    
+                                    <h4>Directory Structure</h4>
+                                    <pre style="background: #1e1e2e; padding: 10px; border-radius: 5px; overflow-x: auto;">uploads/
+  ├── posters/       # Movie posters (1:1.5 aspect ratio recommended)
+  └── backdrops/     # Movie backdrops (16:9 aspect ratio recommended)</pre>
+                                </div>
+
+                                <!-- List Movies -->
+                                <div style="margin: 30px 0;">
+                                    <h3>Endpoints</h3>
+                                    
+                                    <div style="background: #252538; border-radius: 5px; margin: 20px 0; overflow: hidden;">
+                                        <div style="background: #33334d; padding: 10px 15px; display: flex; align-items: center;">
+                                            <span style="background: #ff6b6b; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 10px;">GET</span>
+                                            <span style="font-family: monospace;">/movies</span>
+                                            <span style="margin-left: auto; color: #aaa; font-size: 0.9em;">List all movies</span>
+                                        </div>
+                                        <div style="padding: 15px; border-top: 1px solid #333;">
+                                            <h4>Example Request</h4>
+                                            <h4>Query Parameters</h4>
+                                            <ul style="margin: 10px 0 15px 20px; color: #ddd;">
+                                                <li><code>page</code> (number) - Page number (default: 1)</li>
+                                                <li><code>limit</code> (number) - Items per page (default: 10, max: 100)</li>
+                                                <li><code>genre</code> (string) - Filter by genre (e.g., 'action', 'drama')</li>
+                                                <li><code>year</code> (number) - Filter by release year</li>
+                                                <li><code>search</code> (string) - Search in title and description</li>
+                                                <li><code>sort</code> (string) - Sort by field (e.g., 'title', 'year', 'rating')</li>
+                                                <li><code>order</code> (string) - Sort order ('asc' or 'desc', default: 'desc')</li>
+                                            </ul>
+                                            
+                                            <h4>Example Request</h4>
+                                            <div style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <code>GET /api/v1/movies?page=1&limit=10&genre=drama&year=2020&sort=rating&order=desc</code>
+                                            </div>
+                                            <h4>Example Response (200 OK)</h4>
+                                            <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto; max-height: 200px;">{
+  "success": true,
+  "page": 1,
+  "total_pages": 100,
+  "total_results": 1000,
+  "results": [
+    {
+      "id": "tt0111161",
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "rating": 9.3,
+      "genres": ["Drama"],
+      "poster": "https://via.placeholder.com/300x450",
+      "createdAt": "2023-01-15T10:30:00Z",
+      "updatedAt": "2023-01-15T10:30:00Z"
+    }
+  ]
+}</pre>
+                                            
+                                            <h4>Error Responses</h4>
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">401 Unauthorized</div>
+                                                <pre style="margin: 0;">{
+  "success": false,
+  "error": "No token provided"
+}</pre>
+                                            </div>
+                                            
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">400 Bad Request</div>
+                                                <pre style="margin: 0;">{
+  "success": false,
+  "error": "Invalid query parameters",
+  "details": {
+    "year": "Year must be a number"
+  }
+}</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Get Movie by ID -->
+                                    <div style="background: #252538; border-radius: 5px; margin: 20px 0; overflow: hidden;">
+                                        <div style="background: #33334d; padding: 10px 15px; display: flex; align-items: center;">
+                                            <span style="background: #ff6b6b; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 10px;">GET</span>
+                                            <span style="font-family: monospace;">/movies/:id</span>
+                                            <span style="margin-left: auto; color: #aaa; font-size: 0.9em;">Get movie details</span>
+                                        </div>
+                                        <div style="padding: 15px; border-top: 1px solid #333;">
+                                            <h4>Example Request</h4>
+                                            <h4>URL Parameters</h4>
+                                            <ul style="margin: 10px 0 15px 20px; color: #ddd;">
+                                                <li><code>id</code> (string) - Movie ID (IMDB ID or internal ID)</li>
+                                            </ul>
+                                            
+                                            <h4>Example Request</h4>
+                                            <div style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <code>GET /api/v1/movies/tt0111161</code>
+                                            </div>
+                                            <h4>Example Response (200 OK)</h4>
+                                            <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto; max-height: 300px;">{
+  "success": true,
+  "data": {
+    "id": "tt1375666",
+    "title": "Inception",
+    "year": 2010,
+    "rated": "PG-13",
+    "released": "2010-07-16",
+    "runtime": 148,
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "director": "Christopher Nolan",
+    "writer": "Christopher Nolan",
+    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+    "language": "English, Japanese, French",
+    "country": "United States, United Kingdom",
+    "awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+    "poster_url": "https://api.moviedb.example.com/uploads/posters/tt1375666.jpg",
+    "backdrop_url": "https://api.moviedb.example.com/uploads/backdrops/tt1375666.jpg",
+    "ratings": [
+      { "source": "Internet Movie Database", "value": "8.8/10" },
+      { "source": "Rotten Tomatoes", "value": "87%" },
+      { "source": "Metacritic", "value": "74/100" }
+    ],
+    "metascore": "74",
+    "imdb_rating": 8.8,
+    "imdb_votes": 2483527,
+    "imdb_id": "tt1375666",
+    "type": "movie",
+    "dvd": "07 Dec 2010",
+    "box_office": "$292,576,195",
+    "production": "Warner Bros. Pictures, Legendary Pictures, Syncopy",
+    "website": "http://inceptionmovie.warnerbros.com/",
+    "created_at": "2023-01-15T10:30:00Z",
+    "updated_at": "2023-01-15T10:30:00Z"
+  }
+}</pre>
+                                            
+                                            <h4>Error Responses</h4>
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">404 Not Found</div>
+                                                <pre style="margin: 0;">{
+  "success": false,
+  "error": "Movie not found"
+}</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- Create Movie with Image Upload -->
+                                <div style="margin: 30px 0;">
+                                    <div style="background: #252538; border-radius: 5px; margin: 20px 0; overflow: hidden;">
+                                        <div style="background: #2c3e50; padding: 10px 15px; display: flex; align-items: center;">
+                                            <span style="background: #4CAF50; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 10px;">POST</span>
+                                            <span style="font-family: monospace;">/movies</span>
+                                            <span style="margin-left: auto; color: #aaa; font-size: 0.9em;">Create a new movie with image uploads (Admin only)</span>
+                                        </div>
+                                        <div style="padding: 15px; border-top: 1px solid #333;">
+                                            <h4>Request Headers</h4>
+                                            <div style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <code>Content-Type: multipart/form-data</code><br>
+                                                <code>Authorization: Bearer &lt;your_jwt_token&gt;</code>
+                                            </div>
+                                            
+                                            <h4>Form Data</h4>
+                                            <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <th style="text-align: left; padding: 8px; width: 150px;">Field</th>
+                                                    <th style="text-align: left; padding: 8px;">Description</th>
+                                                    <th style="text-align: left; padding: 8px;">Type</th>
+                                                    <th style="text-align: left; padding: 8px;">Required</th>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>title</code></td>
+                                                    <td style="padding: 8px;">Movie title</td>
+                                                    <td style="padding: 8px;">string</td>
+                                                    <td style="padding: 8px;">✅</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>year</code></td>
+                                                    <td style="padding: 8px;">Release year</td>
+                                                    <td style="padding: 8px;">integer</td>
+                                                    <td style="padding: 8px;">✅</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>poster</code></td>
+                                                    <td style="padding: 8px;">Movie poster image file (max 5MB)</td>
+                                                    <td style="padding: 8px;">file (jpg, png, webp)</td>
+                                                    <td style="padding: 8px;">✅</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>backdrop</code></td>
+                                                    <td style="padding: 8px;">Movie backdrop image file (max 5MB)</td>
+                                                    <td style="padding: 8px;">file (jpg, png, webp)</td>
+                                                    <td style="padding: 8px;">❌</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>director</code></td>
+                                                    <td style="padding: 8px;">Director's name</td>
+                                                    <td style="padding: 8px;">string</td>
+                                                    <td style="padding: 8px;">✅</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>plot</code></td>
+                                                    <td style="padding: 8px;">Movie plot summary</td>
+                                                    <td style="padding: 8px;">string</td>
+                                                    <td style="padding: 8px;">✅</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>genres</code></td>
+                                                    <td style="padding: 8px;">Array of genre names (comma-separated)</td>
+                                                    <td style="padding: 8px;">string</td>
+                                                    <td style="padding: 8px;">✅</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>runtime</code></td>
+                                                    <td style="padding: 8px;">Movie duration in minutes</td>
+                                                    <td style="padding: 8px;">integer</td>
+                                                    <td style="padding: 8px;">❌</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>actors</code></td>
+                                                    <td style="padding: 8px;">Comma-separated list of actors</td>
+                                                    <td style="padding: 8px;">string</td>
+                                                    <td style="padding: 8px;">❌</td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #333;">
+                                                    <td style="padding: 8px;"><code>imdb_rating</code></td>
+                                                    <td style="padding: 8px;">IMDb rating (0-10)</td>
+                                                    <td style="padding: 8px;">number</td>
+                                                    <td style="padding: 8px;">❌</td>
+                                                </tr>
+                                            </table>
+                                            
+                                            <h4>Example Request (cURL)</h4>
+                                            <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">curl -X POST \
+  https://api.moviedb.example.com/api/v1/movies \
+  -H 'Authorization: Bearer your_jwt_token_here' \
+  -F 'title=Inception' \
+  -F 'year=2010' \
+  -F 'director=Christopher Nolan' \
+  -F 'plot=A thief who steals corporate secrets...' \
+  -F 'genres=Action,Sci-Fi,Thriller' \
+  -F 'runtime=148' \
+  -F 'poster=@/path/to/inception-poster.jpg' \
+  -F 'backdrop=@/path/to/inception-backdrop.jpg'</pre>
+                                            
+                                            <h4>Response (201 Created)</h4>
+                                            <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">{
+  "success": true,
+  "data": {
+    "id": "tt1375666",
+    "title": "Inception",
+    "year": 2010,
+    "director": "Christopher Nolan",
+    "plot": "A thief who steals corporate secrets through the use of dream-sharing technology...""",
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "runtime": 148,
+    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "imdb_rating": 8.8,
+    "poster_url": "https://api.moviedb.example.com/uploads/posters/inception_12345.jpg",
+    "backdrop_url": "https://api.moviedb.example.com/uploads/backdrops/inception_12345.jpg",
+    "created_at": "2023-01-15T10:30:00Z",
+    "updated_at": "2023-01-15T10:30:00Z"
+  }
+}</pre>
+                                            
+                                            <h4>Error Responses</h4>
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">400 Bad Request - Invalid file type</div>
+                                                <pre style="margin: 5px 0 0; padding: 0; background: none; color: #ddd;">{
+  "success": false,
+  "error": "VALIDATION_ERROR",
+  "message": "Invalid file type. Only jpg, jpeg, png, webp are allowed.",
+  "details": {
+    "field": "poster",
+    "code": "INVALID_FILE_TYPE"
+  }
+}</pre>
+                                            </div>
+                                            
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">400 Bad Request - File too large</div>
+                                                <pre style="margin: 5px 0 0; padding: 0; background: none; color: #ddd;">{
+  "success": false,
+  "error": "VALIDATION_ERROR",
+  "message": "File size too large. Maximum size is 5MB.",
+  "details": {
+    "field": "backdrop",
+    "code": "FILE_TOO_LARGE"
+  }
+}</pre>
+                                            </div>
+                                            
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">401 Unauthorized</div>
+                                                <pre style="margin: 5px 0 0; padding: 0; background: none; color: #ddd;">{
+  "success": false,
+  "error": "UNAUTHORIZED",
+  "message": "Authentication required"
+}</pre>
+                                            </div>
+                                            
+                                            <div style="background: #2d1e1e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">
+                                                <div style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px;">403 Forbidden</div>
+                                                <pre style="margin: 5px 0 0; padding: 0; background: none; color: #ddd;">{
+  "success": false,
+  "error": "FORBIDDEN",
+  "message": "Insufficient permissions to perform this action"
+}</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Update Movie -->
+                                <div style="background: #252538; border-radius: 5px; margin: 30px 0; overflow: hidden;">
+                                    <div style="background: #33334d; padding: 10px 15px; display: flex; align-items: center;">
+                                        <span style="background: #ffa500; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 10px;">PUT</span>
+                                        <span style="font-family: monospace;">/api/v1/movies/:id</span>
+                                        <span style="margin-left: auto; color: #aaa; font-size: 0.9em;">Update a movie (Admin only)</span>
+                                    </div>
+                                    <div style="padding: 15px; border-top: 1px solid #333;">
+                                        <h4>Request Body (JSON)</h4>
+                                        <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">{
+  "plot": "Updated plot description...",
+  "rating": 8.8
+}</pre>
+                                        
+                                        <h4>Example Response (200 OK)</h4>
+                                        <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">{
+  "success": true,
+  "data": {
+    "id": "tt1375666",
+    "title": "Inception",
+    "plot": "Updated plot description...",
+    "rating": 8.8,
+    "updatedAt": "2023-01-16T14:30:00Z"
+  }
+}</pre>
+                                    </div>
+                                </div>
+                                
+                                <!-- Delete Movie -->
+                                <div style="background: #252538; border-radius: 5px; margin: 30px 0; overflow: hidden;">
+                                    <div style="background: #33334d; padding: 10px 15px; display: flex; align-items: center;">
+                                        <span style="background: #ff4d4d; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 10px;">DELETE</span>
+                                        <span style="font-family: monospace;">/api/v1/movies/:id</span>
+                                        <span style="margin-left: auto; color: #aaa; font-size: 0.9em;">Delete a movie (Admin only)</span>
+                                    </div>
+                                    <div style="padding: 15px; border-top: 1px solid #333;">
+                                        <h4>Example Response (200 OK)</h4>
+                                        <pre style="background: #1e1e2e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">{
+  "success": true,
+  "message": "Movie deleted successfully"
+}</pre>
+                                        
+                                        <h4>Error Response (403 Forbidden)</h4>
+                                        <pre style="background: #2d1e1e; padding: 15px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">{
+  "success": false,
+  "error": "Admin privileges required"
+}</pre>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin: 30px 0; padding: 20px; background: #252538; border-radius: 5px; border-left: 4px solid #8a2be2;">
+                                    <h3 style="margin-top: 0; color: #8a2be2;">🛠️ Implementation Notes</h3>
+                                    
+                                    <h4>Backend Setup (Node.js + Express)</h4>
+                                    <p>1. Install required packages:</p>
+                                    <pre style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">npm install express multer jsonwebtoken</pre>
+                                    
+                                    <p>2. Configure multer for file uploads:</p>
+                                    <pre style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">const multer = require('multer');
+const path = require('path');
+
+// Configure storage
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    let dir = 'uploads/';
+    if (file.fieldname === 'poster') {
+      dir += 'posters/';
+    } else if (file.fieldname === 'backdrop') {
+      dir += 'backdrops/';
+    }
+    require('fs').mkdirSync(dir, { recursive: true });
+    cb(null, dir);
+  },
+  filename: function (req, file, cb) {
+    // Use movie ID if available, otherwise generate a unique name
+    const movieId = req.params.id || Date.now();
+    const ext = path.extname(file.originalname).toLowerCase();
+    cb(null, `${movieId}${ext}`);
+  }
+});
+
+// File filter to accept only images
+const fileFilter = (req, file, cb) => {
+  const allowedTypes = ['.jpg', '.jpeg', '.png', '.webp'];
+  const ext = path.extname(file.originalname).toLowerCase();
+  if (allowedTypes.includes(ext)) {
+    return cb(null, true);
+  }
+  cb(new Error('Invalid file type. Only jpg, jpeg, png, webp are allowed.'));
+};
+
+// Initialize multer with configuration
+const upload = multer({
+  storage: storage,
+  fileFilter: fileFilter,
+  limits: {
+    fileSize: 5 * 1024 * 1024, // 5MB limit
+    files: 2 // Max 2 files (poster and backdrop)
+  }
+});
+
+// Middleware for handling file uploads
+const uploadMovieImages = upload.fields([
+  { name: 'poster', maxCount: 1 },
+  { name: 'backdrop', maxCount: 1 }
+]);</pre>
+
+                                    <h4>Example Route Implementation</h4>
+                                    <pre style="background: #1e1e2e; padding: 10px; border-radius: 5px; margin: 10px 0; overflow-x: auto;">// Create movie with image uploads
+router.post('/movies', authenticateJWT, isAdmin, uploadMovieImages, async (req, res) => {
+  try {
+    const movieData = req.body;
+    
+    // Process uploaded files
+    if (req.files) {
+      if (req.files.poster) {
+        movieData.poster_url = `/uploads/posters/${req.files.poster[0].filename}`;
+      }
+      if (req.files.backdrop) {
+        movieData.backdrop_url = `/uploads/backdrops/${req.files.backdrop[0].filename}`;
+      }
+    }
+    
+    // Process genres if sent as comma-separated string
+    if (typeof movieData.genres === 'string') {
+      movieData.genres = movieData.genres.split(',').map(g => g.trim());
+    }
+    
+    // Process actors if sent as comma-separated string
+    if (typeof movieData.actors === 'string') {
+      movieData.actors = movieData.actors.split(',').map(a => a.trim());
+    }
+    
+    // Create movie in database
+    const movie = await Movie.create(movieData);
+    
+    res.status(201).json({
+      success: true,
+      data: movie
+    });
+    
+  } catch (error) {
+    console.error('Error creating movie:', error);
+    res.status(400).json({
+      success: false,
+      error: 'VALIDATION_ERROR',
+      message: error.message
+    });
+  }
+});</pre>
+
+                                    <h4>Getting Started</h4>
+                                    <p>To start using the MovieDB API:</p>
+                                    <ol>
+                                        <li>Sign up at <a href="#" style="color: #8a2be2;">developer.moviedb.example.com</a> to get your API key</li>
+                                        <li>Include the JWT token in the Authorization header of your requests</li>
+                                        <li>Use multipart/form-data for file uploads</li>
+                                        <li>Start making requests to the API endpoints</li>
+                                    </ol>
+                                    <p>For support, contact <a href="mailto:support@moviedb.example.com" style="color: #8a2be2;">support@moviedb.example.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // API Documentation Modal
+                            const apiDemoBtn = document.getElementById('api-demo-btn');
+                            const apiCodeBtn = document.getElementById('api-code-btn');
+                            const apiDocsModal = document.getElementById('api-docs-modal');
+                            const closeApiDocs = document.getElementById('close-api-docs');
+
+                            apiDemoBtn.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                apiDocsModal.style.display = 'block';
+                                document.body.style.overflow = 'hidden';
+                            });
+
+                            apiCodeBtn.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                alert('Source code will be available on GitHub soon!');
+                            });
+
+                            closeApiDocs.addEventListener('click', function() {
+                                apiDocsModal.style.display = 'none';
+                                document.body.style.overflow = 'auto';
+                            });
+
+                            // Close modal when clicking outside
+                            window.addEventListener('click', function(e) {
+                                if (e.target === apiDocsModal) {
+                                    apiDocsModal.style.display = 'none';
+                                    document.body.style.overflow = 'auto';
+                                }
+                            });
+
+                            // Close with Escape key
+                            document.addEventListener('keydown', function(e) {
+                                if (e.key === 'Escape' && apiDocsModal.style.display === 'block') {
+                                    apiDocsModal.style.display = 'none';
+                                    document.body.style.overflow = 'auto';
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <!-- End of MovieDB API Project Card -->
+                
+                <!-- Course Selection Modal -->
+                    <div id="saas-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+                        <div style="background: #1e1e2d; padding: 25px; border-radius: 10px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative;">
+                            <button id="close-saas-modal" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer;">&times;</button>
+                            <h3 style="color: #8a2be2; margin-top: 0; text-align: center;">Escolha um Curso</h3>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin: 20px 0;">
+                                <div data-course="data-science" style="background: #252538; padding: 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #8a2be2;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="font-size: 32px; margin-right: 15px; width: 50px; height: 50px; background: rgba(138, 43, 226, 0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center;">📊</div>
+                                        <div>
+                                            <div style="font-weight: bold; color: #fff; margin-bottom: 5px;">Data Science 101</div>
+                                            <div style="font-size: 13px; color: #8a8a9c;">Aprenda os fundamentos de ciência de dados com Python</div>
+                                            <div style="display: flex; margin-top: 8px; font-size: 12px; color: #8a8a9c;">
+                                                <span style="margin-right: 15px;">⭐ 4.8 (1.2k alunos)</span>
+                                                <span>🎓 12 horas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-course="ui-ux" style="background: #252538; padding: 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #ff6b6b;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="font-size: 32px; margin-right: 15px; width: 50px; height: 50px; background: rgba(255, 107, 107, 0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center;">🎨</div>
+                                        <div>
+                                            <div style="font-weight: bold; color: #fff; margin-bottom: 5px;">UI/UX Design Masterclass</div>
+                                            <div style="font-size: 13px; color: #8a8a9c;">Domine os princípios de design de interface e experiência do usuário</div>
+                                            <div style="display: flex; margin-top: 8px; font-size: 12px; color: #8a8a9c;">
+                                                <span style="margin-right: 15px;">⭐ 4.9 (987 alunos)</span>
+                                                <span>🎓 8 horas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Detail View -->
+                    <div id="course-detail" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1a1a2e; z-index: 2000; overflow-y: auto; padding: 20px; box-sizing: border-box;">
+                        <div style="max-width: 1000px; margin: 0 auto; position: relative; padding-top: 20px;">
+                            <button id="close-course" style="position: fixed; top: 20px; right: 20px; background: #ff2d75; border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 2001; display: flex; align-items: center; justify-content: center;">×</button>
+                            
+                            <div id="course-content" style="background: #252538; border-radius: 10px; overflow: hidden; margin-top: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                                <!-- Course content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        // Course data
+                        const courses = {
+                            'data-science': {
+                                title: 'Data Science 101',
+                                description: 'Aprenda os fundamentos de ciência de dados, desde análise de dados até machine learning, com projetos práticos usando Python e bibliotecas populares.',
+                                instructor: 'Dr. Maria Silva',
+                                duration: '12 horas',
+                                level: 'Iniciante',
+                                rating: '4.8',
+                                students: '1.245',
+                                price: 'R$ 299,90',
+                                modules: [
+                                    {
+                                        title: 'Introdução à Ciência de Dados',
+                                        lessons: [
+                                            'O que é Ciência de Dados?',
+                                            'Configurando Seu Ambiente',
+                                            'Python Básico para Ciência de Dados',
+                                            'Trabalhando com Jupyter Notebooks',
+                                            'Introdução ao NumPy'
+                                        ]
+                                    },
+                                    {
+                                        title: 'Análise de Dados com Pandas',
+                                        lessons: [
+                                            'Introdução ao Pandas',
+                                            'Técnicas de Limpeza de Dados',
+                                            'Visualização de Dados',
+                                            'Análise Exploratória de Dados',
+                                            'Trabalhando com Dados Faltantes'
+                                        ]
+                                    },
+                                    {
+                                        title: 'Machine Learning Básico',
+                                        lessons: [
+                                            'Introdução ao Machine Learning',
+                                            'Aprendizado Supervisionado vs Não Supervisionado',
+                                            'Seu Primeiro Modelo de ML',
+                                            'Avaliação de Modelos',
+                                            'Feature Engineering'
+                                        ]
+                                    }
+                                ]
+                            },
+                            'ui-ux': {
+                                title: 'UI/UX Design Masterclass',
+                                description: 'Domine os princípios de design de interface e experiência do usuário. Aprenda a criar produtos digitais bonitos e intuitivos que os usuários adoram.',
+                                instructor: 'Carlos Mendes',
+                                duration: '8 horas',
+                                level: 'Intermediário',
+                                rating: '4.9',
+                                students: '987',
+                                price: 'R$ 249,90',
+                                modules: [
+                                    {
+                                        title: 'Fundamentos de UI/UX',
+                                        lessons: [
+                                            'Entendendo as Necessidades do Usuário',
+                                            'Processo de Design Thinking',
+                                            'Noções Básicas de Wireframing',
+                                            'Princípios de Usabilidade',
+                                            'Pesquisa com Usuários'
+                                        ]
+                                    },
+                                    {
+                                        title: 'Design Visual',
+                                        lessons: [
+                                            'Teoria das Cores',
+                                            'Tipografia',
+                                            'Criando Sistemas de Design',
+                                            'Hierarquia Visual',
+                                            'Design Responsivo'
+                                        ]
+                                    },
+                                    {
+                                        title: 'Prototipagem e Testes',
+                                        lessons: [
+                                            'Protótipos Interativos',
+                                            'Métodos de Teste de Usuário',
+                                            'Iterando com Base em Feedback',
+                                            'Ferramentas de Prototipagem',
+                                            'Apresentando Seu Design'
+                                        ]
+                                    }
+                                ]
+                            }
+                        };
+
+                        // Function to show course detail
+                        function showCourse(courseId) {
+                            const course = courses[courseId];
+                            if (!course) return;
+                            
+                            document.body.style.overflow = 'hidden';
+                            document.getElementById('course-detail').style.display = 'block';
+                            
+                            let modulesHtml = '';
+                            course.modules.forEach((module, modIndex) => {
+                                let lessonsHtml = module.lessons.map((lesson, idx) => `
+                                    <div style="padding: 12px 15px 12px 40px; border-bottom: 1px solid #3a3a4a; display: flex; align-items: center; transition: background 0.2s;" onmouseover="this.style.background='#2f2f44'" onmouseout="this.style.background='transparent'">
+                                        <div style="width: 24px; height: 24px; border-radius: 50%; border: 2px solid #8a2be2; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; background: #1a1a2e;">
+                                            <div style="width: 8px; height: 8px; background: #8a2be2; border-radius: 50%;"></div>
+                                        </div>
+                                        <span style="color: #e0e0e0;">${lesson}</span>
+                                        <span style="margin-left: auto; color: #8a8a9c; font-size: 0.9em; background: #33334d; padding: 3px 8px; border-radius: 10px; font-size: 0.8em;">${Math.floor(Math.random() * 15) + 5} min</span>
+                                    </div>
+                                `).join('');
+                                
+                                modulesHtml += `
+                                    <div style="margin-bottom: 25px; background: #2a2a3c; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                        <div style="padding: 15px 20px; background: #33334d; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                                            <h3 style="margin: 0; color: #fff; font-size: 1.1em; display: flex; align-items: center;">
+                                                <span style="margin-right: 10px; font-size: 1.2em;">📚</span>
+                                                ${module.title}
+                                            </h3>
+                                            <div style="display: flex; align-items: center;">
+                                                <span style="color: #8a8a9c; font-size: 0.9em; margin-right: 15px;">${module.lessons.length} aulas</span>
+                                                <span style="color: #8a8a9c; font-size: 1.2em; transition: transform 0.3s;" id="arrow-${modIndex}">▼</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: block;">${lessonsHtml}</div>
+                                    </div>
+                                `;
+                            });
+
+                            document.getElementById('course-content').innerHTML = `
+                                <div style="position: relative;">
+                                    <div style="height: 200px; background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%); position: relative;">
+                                        <div style="position: absolute; bottom: 20px; left: 30px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                                            <div style="background: rgba(0,0,0,0.3); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-size: 0.9em;">
+                                                ${course.level} • ${course.duration}
+                                            </div>
+                                            <h1 style="margin: 0; font-size: 2.2em; margin-bottom: 10px;">${course.title}</h1>
+                                            <div style="display: flex; align-items: center; font-size: 0.95em; margin-bottom: 5px;">
+                                                <span style="margin-right: 15px;">👤 ${course.instructor}</span>
+                                                <span>⭐ ${course.rating} (${course.students} alunos)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 30px;">
+                                        <div style="display: flex; flex-wrap: wrap; gap: 30px;">
+                                            <div style="flex: 1; min-width: 300px;">
+                                                <h2 style="color: #fff; margin-top: 0; border-bottom: 2px solid #8a2be2; padding-bottom: 10px; display: inline-block;">Sobre o Curso</h2>
+                                                <p style="color: #b8b8c7; line-height: 1.6;">${course.description}</p>
+                                                
+                                                <h3 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3em;">O que você vai aprender</h3>
+                                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+                                                    <div style="display: flex; align-items: center; color: #b8b8c7; font-size: 0.95em;">
+                                                        <span style="color: #8a2be2; margin-right: 8px;">✓</span> Habilidades práticas em ${course.title.includes('Data Science') ? 'Python' : 'Design'}
+                                                    </div>
+                                                    <div style="display: flex; align-items: center; color: #b8b8c7; font-size: 0.95em;">
+                                                        <span style="color: #8a2be2; margin-right: 8px;">✓</span> Projetos do mundo real
+                                                    </div>
+                                                    <div style="display: flex; align-items: center; color: #b8b8c7; font-size: 0.95em;">
+                                                        <span style="color: #8a2be2; margin-right: 8px;">✓</span> Certificado de conclusão
+                                                    </div>
+                                                    <div style="display: flex; align-items: center; color: #b8b8c7; font-size: 0.95em;">
+                                                        <span style="color: #8a2be2; margin-right: 8px;">✓</span> Suporte da comunidade
+                                                    </div>
+                                                </div>
+                                                
+                                                <h3 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3em;">Conteúdo do Curso</h3>
+                                                ${modulesHtml}
+                                            </div>
+                                            
+                                            <div style="width: 300px; background: #2a2a3c; border-radius: 10px; padding: 25px; height: fit-content; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                                <div style="text-align: center; margin-bottom: 20px;">
+                                                    <div style="font-size: 2.5em; font-weight: bold; color: #fff; margin-bottom: 5px;">${course.price}</div>
+                                                    <div style="color: #8a8a9c; margin-bottom: 15px;">ou 12x de R$ ${(parseFloat(course.price.replace('R$ ', '').replace('.', '').replace(',', '.')) / 12).toFixed(2).replace('.', ',')}</div>
+                                                    <button style="background: #8a2be2; color: white; border: none; padding: 15px 30px; border-radius: 5px; font-size: 1.1em; cursor: pointer; font-weight: bold; width: 100%; margin-bottom: 15px; transition: background 0.3s;" onmouseover="this.style.background='#7b1fa2'" onmouseout="this.style.background='#8a2be2'">
+                                                        Matricular-se Agora
+                                                    </button>
+                                                    <button style="background: transparent; color: #8a2be2; border: 2px solid #8a2be2; padding: 13px 30px; border-radius: 5px; font-size: 1em; cursor: pointer; width: 100%; transition: all 0.3s;" onmouseover="this.style.background='rgba(138, 43, 226, 0.1)'" onmouseout="this.style.background='transient'">
+                                                        Adicionar ao Carrinho
+                                                    </button>
+                                                </div>
+                                                
+                                                <div style="border-top: 1px solid #3a3a4a; padding-top: 20px; margin-top: 20px;">
+                                                    <h4 style="color: #fff; margin-top: 0; margin-bottom: 15px; font-size: 1.1em;">Este curso inclui:</h4>
+                                                    <div style="color: #b8b8c7; font-size: 0.95em; margin-bottom: 10px;">
+                                                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                            <span style="color: #8a2be2; margin-right: 10px;">▶️</span> ${course.duration} de vídeo sob demanda
+                                                        </div>
+                                                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                            <span style="color: #8a2be2; margin-right: 10px;">📚</span> ${course.modules.reduce((acc, module) => acc + module.lessons.length, )} aulas
+                                                        </div>
+                                                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                            <span style="color: #8a2be2; margin-right: 10px;">📱</span> Acesso em dispositivos móveis e TV
+                                                        </div>
+                                                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                            <span style="color: #8a2be2; margin-right: 10px;">🏆</span> Certificado de conclusão
+                                                        </div>
+                                                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                            <span style="color: #8a2be2; margin-right: 10px;">🔄</span> Acesso vitalício
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div style="margin-top: 20px; text-align: center;">
+                                                    <div style="color: #8a8a9c; font-size: 0.9em; margin-bottom: 10px;">Garantia de devolução em 30 dias</div>
+                                                    <div style="font-size: 0.8em; color: #6a6a7a;">Acesso imediato após a confirmação do pagamento</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            // Add click handlers for module toggles
+                            course.modules.forEach((_, index) => {
+                                setTimeout(() => {
+                                    const moduleHeader = document.querySelector(`#course-content [onclick*="${index}"]`);
+                                    if (moduleHeader) {
+                                        moduleHeader.addEventListener('click', function() {
+                                            const arrow = this.querySelector('span:last-child');
+                                            if (arrow) {
+                                                arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼';
+                                            }
+                                        });
+                                    }
+                                }, 100);
+                            });
+                        }
+
+                        // Close course detail
+                        document.addEventListener('click', function(e) {
+                            if (e.target.id === 'close-course' || e.target.closest('#close-course')) {
+                                document.getElementById('course-detail').style.display = 'none';
+                                document.body.style.overflow = 'auto';
+                            }
+                        });
+
+                        // Initialize course click handlers
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // Make course cards clickable
+                            const courseCards = document.querySelectorAll('#saas-modal [data-course]');
+                            courseCards.forEach(card => {
+                                card.style.cursor = 'pointer';
+                                card.addEventListener('click', function() {
+                                    const courseId = this.getAttribute('data-course');
+                                    showCourse(courseId);
+                                    // Close the modal
+                                    document.getElementById('saas-modal').style.display = 'none';
+                                });
+                            });
+
+                            // Make sure the modal can be closed from the course detail view
+                            document.getElementById('close-saas-modal').addEventListener('click', function() {
+                                document.getElementById('saas-modal').style.display = 'none';
+                                document.body.style.overflow = 'auto';
+                            });
+
+                            // View Demo button
+                            const viewDemoBtn = document.getElementById('viewSaaSDemo');
+                            if (viewDemoBtn) {
+                                viewDemoBtn.addEventListener('click', function() {
+                                    document.getElementById('saas-modal').style.display = 'flex';
+                                    document.body.style.overflow = 'hidden';
+                                });
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> harleysix331@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +55 21 97294-3858</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
