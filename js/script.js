@@ -123,3 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+fetch('https://backend-fmtg.onrender.com/')
+  .then(res => res.json())
+  .then(data => {
+    const el = document.createElement('pre');
+    el.textContent = JSON.stringify(data, null, 2);
+    document.body.appendChild(el);
+  })
+  .catch(err => {
+    console.error(err);
+  });

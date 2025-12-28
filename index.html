@@ -129,6 +129,28 @@
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
+                <!-- EduFlow Portfolio Card -->
+                <div class="portfolio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">EduFlow</h3>
+                    <p class="card-subtitle">Online Learning Platform</p>
+                    <p class="card-description">
+                        A modern SaaS platform for creating and selling online courses with an intuitive interface and powerful features.
+                    </p>
+                    <ul class="features-list">
+                        <li>Course Creation & Management</li>
+                        <li>Subscription & One-time Payments</li>
+                        <li>Student Progress Tracking</li>
+                        <li>Video Content Hosting</li>
+                        <li>Mobile Responsive</li>
+                    </ul>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">VIEW DEMO</a>
+                        <a href="#" class="btn btn-secondary">LEARN MORE</a>
+                    </div>
+                </div>
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://img.icons8.com/color/480/snake.png" alt="Snake Game" style="width: 100%; height: auto; background: #000; padding: 20px; box-sizing: border-box;">
@@ -238,29 +260,28 @@
                         });
                     </script>
                 </div>
-                <!-- EduFlow Project Card -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; overflow: hidden;">
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; overflow: hidden;">
                             <div style="text-align: center; padding: 20px; color: white;">
-                                <div style="font-size: 48px;">📚</div>
+                                <div style="font-size: 48px;">🎓</div>
                                 <h3 style="color: #fff; margin: 10px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">EduFlow</h3>
-                                <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Modern Learning Platform</p>
+                                <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Online Learning Platform</p>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>EduFlow - Learning Management System</h3>
-                        <p>An innovative e-learning platform that connects students with quality educational content and interactive courses.</p>
+                        <h3>EduFlow - Online Learning Platform</h3>
+                        <p>A modern SaaS platform for creating and selling online courses with integrated payment processing and student management.</p>
                         <div class="project-features" style="margin: 10px 0; font-size: 0.9em; color: #aaa;">
-                            <div>📚 Interactive Course Content</div>
-                            <div>🎓 Progress Tracking</div>
-                            <div>👨‍🏫 Expert Instructors</div>
-                            <div>📱 Mobile-Friendly</div>
-                            <div>🎯 Skill Assessments</div>
+                            <div>🎯 Course Creation & Management</div>
+                            <div>💳 Subscription & One-time Payments</div>
+                            <div>📊 Student Progress Tracking</div>
+                            <div>🎥 Video Content Hosting</div>
+                            <div>📱 Mobile Responsive</div>
                         </div>
                         <div class="project-links">
-                            <button class="btn view-eduflow-demo" style="background: #8a2be2;">View Demo</button>
+                            <button id="viewSaaSDemo" class="btn" style="background: #8a2be2;">View Demo</button>
                             <a href="#" class="btn btn-outline" style="border-color: #8a2be2; color: #8a2be2;">Learn More</a>
                         </div>
                     </div>
@@ -855,64 +876,42 @@ router.post('/movies', authenticateJWT, isAdmin, uploadMovieImages, async (req, 
                 </div>
                 <!-- End of MovieDB API Project Card -->
                 
-                <!-- EduFlow Demo Modal -->
-                <div id="eduflow-course-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-                    <div style="background: #1e1e2d; padding: 25px; border-radius: 10px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative;">
-                        <button id="close-eduflow-course-modal" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='rotate(90deg)'" onmouseout="this.style.transform='rotate(0)'">&times;</button>
-                        <h3 style="color: #8a2be2; margin-top: 0; text-align: center; font-size: 24px; margin-bottom: 20px;">🎓 Welcome to EduFlow</h3>
-                        <p style="text-align: center; color: #aaa; margin-bottom: 25px;">Select a course to get started with your learning journey</p>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin: 20px 0;">
-                            <div data-course="web-development" style="background: #252538; padding: 20px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #8a2be2;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                <div style="display: flex; align-items: center;">
-                                    <div style="font-size: 36px; margin-right: 20px; width: 60px; height: 60px; background: rgba(138, 43, 226, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🌐</div>
-                                    <div>
-                                        <div style="font-weight: bold; color: #fff; margin-bottom: 5px; font-size: 18px;">Web Development Bootcamp</div>
-                                        <div style="font-size: 14px; color: #8a8a9c; margin-bottom: 8px;">Master modern web development with HTML, CSS, JavaScript and React</div>
-                                        <div style="display: flex; font-size: 13px; color: #8a8a9c;">
-                                            <span style="margin-right: 15px;">⭐ 4.8 (2.4k students)</span>
-                                            <span>⏱️ 8 weeks</span>
+                <!-- Course Selection Modal -->
+                    <div id="saas-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+                        <div style="background: #1e1e2d; padding: 25px; border-radius: 10px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative;">
+                            <button id="close-saas-modal" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer;">&times;</button>
+                            <h3 style="color: #8a2be2; margin-top: 0; text-align: center;">Escolha um Curso</h3>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin: 20px 0;">
+                                <div data-course="data-science" style="background: #252538; padding: 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #8a2be2;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="font-size: 32px; margin-right: 15px; width: 50px; height: 50px; background: rgba(138, 43, 226, 0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center;">📊</div>
+                                        <div>
+                                            <div style="font-weight: bold; color: #fff; margin-bottom: 5px;">Data Science 101</div>
+                                            <div style="font-size: 13px; color: #8a8a9c;">Aprenda os fundamentos de ciência de dados com Python</div>
+                                            <div style="display: flex; margin-top: 8px; font-size: 12px; color: #8a8a9c;">
+                                                <span style="margin-right: 15px;">⭐ 4.8 (1.2k alunos)</span>
+                                                <span>🎓 12 horas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-course="ui-ux" style="background: #252538; padding: 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #ff6b6b;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="font-size: 32px; margin-right: 15px; width: 50px; height: 50px; background: rgba(255, 107, 107, 0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center;">🎨</div>
+                                        <div>
+                                            <div style="font-weight: bold; color: #fff; margin-bottom: 5px;">UI/UX Design Masterclass</div>
+                                            <div style="font-size: 13px; color: #8a8a9c;">Domine os princípios de design de interface e experiência do usuário</div>
+                                            <div style="display: flex; margin-top: 8px; font-size: 12px; color: #8a8a9c;">
+                                                <span style="margin-right: 15px;">⭐ 4.9 (987 alunos)</span>
+                                                <span>🎓 8 horas</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div data-course="data-science" style="background: #252538; padding: 20px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #00bcd4;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                <div style="display: flex; align-items: center;">
-                                    <div style="font-size: 36px; margin-right: 20px; width: 60px; height: 60px; background: rgba(0, 188, 212, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📊</div>
-                                    <div>
-                                        <div style="font-weight: bold; color: #fff; margin-bottom: 5px; font-size: 18px;">Data Science Fundamentals</div>
-                                        <div style="font-size: 14px; color: #8a8a9c; margin-bottom: 8px;">Learn data analysis, visualization, and machine learning with Python</div>
-                                        <div style="display: flex; font-size: 13px; color: #8a8a9c;">
-                                            <span style="margin-right: 15px;">⭐ 4.9 (1.8k students)</span>
-                                            <span>⏱️ 10 weeks</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div data-course="mobile-apps" style="background: #252538; padding: 20px; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; border-left: 4px solid #ff9800;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                                <div style="display: flex; align-items: center;">
-                                    <div style="font-size: 36px; margin-right: 20px; width: 60px; height: 60px; background: rgba(255, 152, 0, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📱</div>
-                                    <div>
-                                        <div style="font-weight: bold; color: #fff; margin-bottom: 5px; font-size: 18px;">Mobile App Development</div>
-                                        <div style="font-size: 14px; color: #8a8a9c; margin-bottom: 8px;">Build cross-platform mobile apps with React Native</div>
-                                        <div style="display: flex; font-size: 13px; color: #8a8a9c;">
-                                            <span style="margin-right: 15px;">⭐ 4.7 (1.5k students)</span>
-                                            <span>⏱️ 6 weeks</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #333;">
-                            <p style="color: #8a8a9c; margin-bottom: 15px;">Can't decide? Try our free trial!</p>
-                            <button style="background: #8a2be2; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: 500; transition: background 0.3s;" onmouseover="this.style.background='#7b1fa2'" onmouseout="this.style.background='#8a2be2'">Start 7-Day Free Trial</button>
                         </div>
                     </div>
-                </div>
-                
+
                     <!-- Course Detail View -->
                     <div id="course-detail" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1a1a2e; z-index: 2000; overflow-y: auto; padding: 20px; box-sizing: border-box;">
                         <div style="max-width: 1000px; margin: 0 auto; position: relative; padding-top: 20px;">
@@ -1288,130 +1287,8 @@ router.post('/movies', authenticateJWT, isAdmin, uploadMovieImages, async (req, 
             }
         }
         
-        // Add CSS for modal
-        const style = document.createElement('style');
-        style.textContent = `
-            .modal-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0,0,0,0.7);
-                z-index: 1000;
-                justify-content: center;
-                align-items: center;
-            }
-            .modal-content {
-                background: #1e1e2d;
-                padding: 30px;
-                border-radius: 10px;
-                max-width: 90%;
-                max-height: 90vh;
-                overflow-y: auto;
-                position: relative;
-            }
-            .modal-close {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                background: none;
-                border: none;
-                color: #fff;
-                font-size: 24px;
-                cursor: pointer;
-                padding: 5px 10px;
-            }
-            body.modal-open {
-                overflow: hidden;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Simple modal control
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get elements
-            const modal = document.getElementById('eduflow-course-modal');
-            const openButtons = document.querySelectorAll('.view-eduflow-demo');
-            const closeButton = document.getElementById('close-eduflow-course-modal');
-            
-            // Open modal function
-            function openModal() {
-                if (modal) {
-                    modal.style.display = 'flex';
-                    document.body.classList.add('modal-open');
-                }
-            }
-            
-            // Close modal function
-            function closeModal() {
-                if (modal) {
-                    modal.style.display = 'none';
-                    document.body.classList.remove('modal-open');
-                }
-            }
-            
-            // Add click event to all open buttons
-            openButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openModal();
-                });
-            });
-            
-            // Close modal when clicking the close button
-            if (closeButton) {
-                closeButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    closeModal();
-                });
-            }
-            
-            // Close modal when clicking outside the content
-            if (modal) {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === modal) {
-                        closeModal();
-                    }
-                });
-                
-                // Handle course selection
-                const courseItems = modal.querySelectorAll('[data-course]');
-                courseItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        const course = this.getAttribute('data-course');
-                        alert(`You've selected the ${course} course!`);
-                    });
-                });
-            }
-            
-            // Close with ESC key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
-                    closeModal();
-                }
-            });
-        });
-        
-        // Close with ESC key (global listener)
-        document.addEventListener('keydown', function(e) {
-            const modal = document.getElementById('eduflow-course-modal');
-            if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
-                closeEduflowModal();
-            }
-        });
-        
-        // Initialize when DOM is loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initEduflowModal);
-        } else {
-            initEduflowModal();
-        }
+        // Inicia a verificação do status quando a página carregar
+        document.addEventListener('DOMContentLoaded', checkServerStatus);
     </script>
-    
 </body>
 </html>
