@@ -1290,5 +1290,29 @@ router.post('/movies', authenticateJWT, isAdmin, uploadMovieImages, async (req, 
         // Inicia a verificação do status quando a página carregar
         document.addEventListener('DOMContentLoaded', checkServerStatus);
     </script>
+    <div id="server-status" style="
+  background:#111;
+  color:#0f0;
+  padding:15px;
+  margin-top:40px;
+  font-family:monospace;
+">
+  🔴 Conectando ao servidor...
+</div>
+
+<script>
+fetch('https://backend-fmtg.onrender.com/api/status')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('server-status').innerHTML =
+      '🟢 BACKEND ONLINE<br><pre>' +
+      JSON.stringify(data, null, 2) +
+      '</pre>';
+  })
+  .catch(err => {
+    document.getElementById('server-status').innerHTML =
+      '🔴 ERRO AO CONECTAR AO BACKEND';
+  });
+</script>
 </body>
 </html>
