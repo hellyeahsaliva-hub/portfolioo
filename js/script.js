@@ -133,3 +133,15 @@ fetch('https://backend-fmtg.onrender.com/')
   .catch(err => {
     console.error(err);
   });
+// === BACKEND STATUS TEST (NÃO REMOVE NADA) ===
+fetch('https://backend-fmtg.onrender.com/api/status')
+  .then(res => res.json())
+  .then(data => {
+    const box = document.createElement('div');
+    box.style.cssText = 'background:#000;color:#0f0;padding:10px;margin:20px;font-family:monospace;';
+    box.innerText = 'BACKEND ONLINE\n' + JSON.stringify(data, null, 2);
+    document.body.appendChild(box);
+  })
+  .catch(() => {
+    console.log('Erro ao conectar backend');
+  });
